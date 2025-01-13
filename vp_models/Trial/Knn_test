@@ -1,0 +1,23 @@
+import numpy as np
+import sys
+import os
+
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from models.Knn import Knn_
+
+
+
+def test_knn():
+    X_train = np.array([[1, 2], [2, 3], [3, 4]])
+    y_train = np.array([0, 1, 0])
+    X_test = np.array([[2, 2]])
+    model =Knn_(n_neighbors=3)
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    assert predictions == 0
+
+if __name__ == "__main__":
+    test_knn()
+    print("All tests passed for Knn")
