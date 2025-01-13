@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="vp_models",  # Ensure the name is unique on PyPI
-    version="0.2.0",  # Follow semantic versioning
+    version="1.0.2",  # Follow semantic versioning
     author="Vishnupriya K",
     author_email="vishnupriyakarthy@gmail.com",
     description="A package for machine learning models and utilities",
